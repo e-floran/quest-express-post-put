@@ -65,7 +65,7 @@ app.post(
 );
 
 
-app.put('/api/users/:id', putValidation, (req, res) => {
+app.put('/api/users/:userId', putValidation, (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(422).json({ errors: errors.array() });
